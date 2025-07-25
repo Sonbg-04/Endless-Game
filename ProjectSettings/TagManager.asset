@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DeadZone
+  - Block
   layers:
   - Default
   - TransparentFX
@@ -11,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Block
+  - Player
+  - Dead
   - 
   - 
   - 
@@ -38,6 +40,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3457689739
+    locked: 0
+  - name: Gameobject
+    uniqueID: 2724528827
+    locked: 0
+  - name: Front
+    uniqueID: 271958919
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
