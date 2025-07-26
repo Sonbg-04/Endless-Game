@@ -29,8 +29,8 @@ namespace Sonn.EndlessGame
     public enum GamePref
     {
         BestScore,
-        LevelPrefix,
-        CurrentPlayerID,
+        LevelUnlocked,
+        CurrentLevelID,
         IsMusicOn,
         IsSoundOn
     }
