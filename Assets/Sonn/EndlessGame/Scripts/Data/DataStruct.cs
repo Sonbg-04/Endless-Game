@@ -53,4 +53,15 @@ namespace Sonn.EndlessGame
         Playing,
         GameOver
     }
+
+    [System.Serializable]
+    public class LevelItem
+    {
+        public int scoreRequire;
+        public Sprite unlockThumb, lockThumb, levelBG, characterPrevImg;
+        public Player playerPrefab;
+        public Blocks blockPrefab;
+        public float spawnTime, baseSpeed, maxSpeed;
+
+    }
 }
