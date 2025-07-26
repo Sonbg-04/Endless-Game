@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - scoreRequire: 0
+  - scoreRequire: 500
     unlockThumb: {fileID: 0}
     lockThumb: {fileID: 0}
     levelBG: {fileID: 0}
