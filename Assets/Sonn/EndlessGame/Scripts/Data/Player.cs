@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,11 +20,6 @@ namespace Sonn.EndlessGame
         {
             m_rb = GetComponent<Rigidbody2D>();
             m_animator = GetComponent<Animator>();
-        }
-
-        void Start()
-        {
-
         }
 
         void Update()
@@ -87,7 +82,22 @@ namespace Sonn.EndlessGame
 
             m_animator.SetBool(CharacterAnimator.Jump.ToString(), true);
             m_animator.SetBool(CharacterAnimator.Land.ToString(), false);
-        }    
+        }
+
+        private void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.CompareTag(GameTag.Block.ToString()))
+            {
+                Debug.Log("Đã va chạm với Block");
+            }    
+        }
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag(GameTag.DeadZone.ToString()))
+            {
+                Debug.Log("Đã va chạm vào vùng chết");
+            }    
+        }
 
     }
 }
