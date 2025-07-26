@@ -88,7 +88,11 @@ namespace Sonn.EndlessGame
         {
             if (col.gameObject.CompareTag(GameTag.Block.ToString()))
             {
-                Debug.Log("Đã va chạm với Block");
+                Blocks bl = col.gameObject.GetComponent<Blocks>();
+                if (bl)
+                {
+                    bl.PlayerLand();
+                }    
             }    
         }
         private void OnTriggerEnter2D(Collider2D col)
