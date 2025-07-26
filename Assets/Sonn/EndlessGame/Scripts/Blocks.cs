@@ -73,6 +73,15 @@ namespace Sonn.EndlessGame
             }
             canMove = false;
             m_rb.velocity = Vector2.zero;
+        }   
+        
+        public void SpriteOrderUp(SpriteRenderer prevBlockSp)
+        {
+            if (IsComponentNull())
+            {
+                return;
+            }
+            m_sr.sortingOrder = prevBlockSp.sortingOrder + 1;
         }    
     }
 
