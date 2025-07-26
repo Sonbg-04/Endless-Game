@@ -20,9 +20,9 @@ namespace Sonn.EndlessGame
 
     public enum CharacterAnimator
     {
-        Idle,
         Jump,
         Land,
+        Idle,
         Dead
     }
 
