@@ -52,7 +52,12 @@ namespace Sonn.EndlessGame
 
         public bool IsComponentNull()
         {
-            return m_rb == null || m_animator == null;
+            bool check = m_rb == null || m_animator == null;
+            if (check)
+            {
+                Debug.LogError("Có thành phần để rỗng. Vui lòng kiểm tra lại!");
+            }    
+            return check;
         }
 
         private void IsOnBlock()

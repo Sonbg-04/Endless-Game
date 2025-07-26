@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +8,7 @@ namespace Sonn.EndlessGame
     {
         public float moveSpeed, blockDistance;
         public MoveDirection moveDirection;
+        public Sprite[] blockSprites;
         public bool canMove;
         public int minScore, maxScore;
 
@@ -38,9 +39,24 @@ namespace Sonn.EndlessGame
         }
         public bool IsComponentNull()
         {
-            return m_rb == null || m_sr == null;
+            bool check = m_rb == null || m_sr == null;
+            if (check)
+            {
+                Debug.LogError("Có thành phần để rỗng. Vui lòng kiểm tra lại!");
+            }
+            return check;
         }
         
+        public void ChangeSprite(ref int index)
+        {
+            if (blockSprites == null || blockSprites.Length <= 0
+                || IsComponentNull())
+            {
+                return;
+            }    
+            m_sr.sprite = blockSprites[index];
+        }    
+
         private void BlockMoving()
         {
             if (IsComponentNull() || !canMove)
