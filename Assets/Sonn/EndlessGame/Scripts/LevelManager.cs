@@ -14,6 +14,11 @@ namespace Sonn.EndlessGame
             MakeSingleton();
         }
 
+        private void Start()
+        {
+            Init();
+        }
+
         private void Init()
         {
             if (levels == null || levels.Length <= 0)
