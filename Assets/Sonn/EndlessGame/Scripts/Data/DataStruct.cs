@@ -62,6 +62,7 @@ namespace Sonn.EndlessGame
         public Player playerPrefab;
         public Blocks blockPrefab;
         public float spawnTime, baseSpeed, maxSpeed;
+        public GameObject map;
 
     }
 }

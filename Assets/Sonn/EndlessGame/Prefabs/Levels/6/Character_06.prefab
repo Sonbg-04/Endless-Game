@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6984255930519326580}
   - component: {fileID: 5346473811369077672}
   - component: {fileID: 8597844300236159291}
+  - component: {fileID: -5371682730517208698}
   m_Layer: 7
   m_Name: Character_06
   m_TagString: Player
@@ -180,3 +181,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8238182, y: 3.217124}
   m_EdgeRadius: 0
+--- !u!114 &-5371682730517208698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864580061595291767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1da76824ac0a984bbf65a04ac8fb651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 8
+  blockCheckingRadius: 0.5
+  blockCheckingOffset: 0.6
+  blockLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  landVfx: {fileID: 7271626665544113322, guid: ff1498ac49815044a882321c17ee1fa3, type: 3}

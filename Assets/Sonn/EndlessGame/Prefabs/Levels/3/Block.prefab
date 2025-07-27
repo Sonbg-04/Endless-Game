@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 5690555370123621035}
   - component: {fileID: 5817206635781422225}
   - component: {fileID: 5761514580087786499}
+  - component: {fileID: -1106518390278284615}
   m_Layer: 6
   m_Name: Block
   m_TagString: Block
@@ -370,3 +371,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0131688, y: 1.9534409}
   m_EdgeRadius: 0
+--- !u!114 &-1106518390278284615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6839037062264268383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149df408aeb8d414ab376494bcd13542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  blockDistance: 0
+  moveDirection: 0
+  blockSprites:
+  - {fileID: 21300000, guid: 21a9386a9bc0b5546a16c94c0aceed53, type: 3}
+  - {fileID: 21300000, guid: b427b6174b091c945ad8e43df5ba5f52, type: 3}
+  - {fileID: 21300000, guid: 01ab05995d265d54eaa425dd22aa3322, type: 3}
+  - {fileID: 21300000, guid: 87c4e3d9702542c44a05883f8146a5fb, type: 3}
+  - {fileID: 21300000, guid: 8b1d572680dcf904eb19f4ad1b219224, type: 3}
+  - {fileID: 21300000, guid: 3401f718e158f0a4397b97a66c012bff, type: 3}
+  - {fileID: 21300000, guid: a5528c2a64af4e243b106e95754977b7, type: 3}
+  - {fileID: 21300000, guid: fa38666352b91e54499bcc972019c448, type: 3}
+  - {fileID: 21300000, guid: 9608254d64d407a49ac8dfaf7003fb6a, type: 3}
+  - {fileID: 21300000, guid: a7cb2821630cd1a47add8f40057f5133, type: 3}
+  - {fileID: 21300000, guid: facae0b0c029a7a4a9bf0f9e68ed86f1, type: 3}
+  canMove: 1
+  minScore: 0
+  maxScore: 0
