@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  blockDistance: 0
+  blockDistance: 1
   moveDirection: 0
   blockSprites:
   - {fileID: 21300000, guid: 8984ac9ff36ab44419e2dd1a919686fc, type: 3}
@@ -188,7 +188,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fdee6067d18bef54f899d2ee5c14974b, type: 3}
   - {fileID: 21300000, guid: b17dcae90821215438a4dd5436cf1040, type: 3}
   - {fileID: 21300000, guid: 621525fa7be2d4d44b2dd13aafb54ed2, type: 3}
-  canMove: 1
+  canMove: 0
   minScore: 0
   maxScore: 0
 --- !u!1 &2467442520941763635

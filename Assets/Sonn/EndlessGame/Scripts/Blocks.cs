@@ -55,6 +55,12 @@ namespace Sonn.EndlessGame
                 return;
             }    
             m_sr.sprite = blockSprites[index];
+            index++;
+            if (index >= blockSprites.Length)
+            {
+                index = 0;
+            }
+
         }    
 
         private void BlockMoving()

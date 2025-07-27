@@ -29,6 +29,7 @@ namespace Sonn.EndlessGame
         void Start()
         {
             Init();
+            StartCoroutine(SpawnBlockCoroutine());
         }
 
         public void MakeSingleton()
@@ -95,6 +96,73 @@ namespace Sonn.EndlessGame
         public bool IsComponentNull()
         {
             return LevelManager.Ins == null;
+        }
+
+        IEnumerator SpawnBlockCoroutine()
+        {
+            if (IsComponentNull() || m_curLevel == null || m_curBlock == null)
+            {
+                yield break;
+            }
+
+            var blockPrefab = m_curLevel.blockPrefab;
+
+            if (blockPrefab == null)
+            {
+                yield break;
+            }
+
+            while (gameState != GameState.GameOver)
+            {
+                SpriteRenderer currentBlockSr = m_curBlock.Sr;
+                m_blockSpawnPosY += m_curBlock.blockDistance;
+                m_blockSpeed += gameSpeed;
+                m_blockSpeed = Mathf.Clamp(m_blockSpeed, m_curLevel.baseSpeed, m_curLevel.maxSpeed);
+
+                float checking = Random.Range(0, 1f);
+                GameObject warningSignClone = null;
+                if (checking <= 0.5f)
+                {
+                    Vector3 spawnPos = new(m_cameraSize.x / 2 - 0.3f, m_blockSpawnPosY, 0);
+                    warningSignClone = Instantiate(warningSignPrefab, spawnPos, Quaternion.identity);
+                    warningSignClone.transform.localScale = new(
+                        warningSignClone.transform.localScale.x * -1f, 
+                        warningSignClone.transform.localScale.y, 
+                        warningSignClone.transform.localScale.z);
+
+                    
+                }
+                else
+                {
+                    Vector3 spawnPos = new(-(m_cameraSize.x / 2 - 0.3f), m_blockSpawnPosY, 0);
+                    warningSignClone = Instantiate(warningSignPrefab, spawnPos, Quaternion.identity);
+                }    
+
+                    yield return new WaitForSeconds(m_curLevel.spawnTime);
+                if (checking <= 0.5f)
+                {
+                    Vector3 spawnPos = new(m_cameraSize.x / 2 + 0.6f, m_blockSpawnPosY, 0);
+                    m_curBlock = Instantiate(blockPrefab, spawnPos, Quaternion.identity);
+                    m_curBlock.moveDirection = MoveDirection.Left;
+                }
+                else
+                {
+                    Vector3 spawnPos = new(-(m_cameraSize.x / 2 + 0.6f), m_blockSpawnPosY, 0);
+                    m_curBlock = Instantiate(blockPrefab, spawnPos, Quaternion.identity);
+                    m_curBlock.moveDirection = MoveDirection.Right;
+                }
+
+                m_curBlock.ChangeSprite(ref m_blockIndex);
+                m_curBlock.moveSpeed = m_blockSpeed;
+                m_curBlock.SpriteOrderUp(currentBlockSr);
+                m_curBlock.canMove = true;
+
+                if (warningSignClone)
+                {
+                    Destroy(warningSignClone);
+                }
+
+            }    
         }
     }
 
