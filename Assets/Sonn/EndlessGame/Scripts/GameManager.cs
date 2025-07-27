@@ -164,6 +164,35 @@ namespace Sonn.EndlessGame
 
             }    
         }
+
+        public void PlayGame()
+        {
+            if (IsComponentNull())
+            {
+                return;
+            }
+            gameState = GameState.Playing;
+            StartCoroutine(SpawnBlockCoroutine());
+        }    
+        public void GameOver()
+        {
+            if (IsComponentNull())
+            {
+                return;
+            }
+            gameState = GameState.GameOver;
+            Debug.Log("Game Over! Final Score: " + m_score);
+        }    
+        public void AddScore(int score)
+        {
+            if (IsComponentNull() || gameState != GameState.Playing)
+            {
+                return;
+            }
+            m_score += score;
+            Pref.bestScore = m_score;
+
+        }    
     }
 
 }

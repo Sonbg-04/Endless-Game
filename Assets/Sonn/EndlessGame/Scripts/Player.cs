@@ -27,8 +27,8 @@ namespace Sonn.EndlessGame
             if (m_isDead || IsComponentNull())
             {
                 return;
-            }    
-
+            }
+            transform.position = new(0, transform.position.y, 0);
             Jump();
             
             if (m_rb.velocity.y < 0)
@@ -52,7 +52,7 @@ namespace Sonn.EndlessGame
 
         public bool IsComponentNull()
         {
-            bool check = m_rb == null || m_animator == null;
+            bool check = m_rb == null || m_animator == null || GameManager.Ins == null;
             if (check)
             {
                 Debug.LogError("Có thành phần để rỗng. Vui lòng kiểm tra lại!");
@@ -94,17 +94,36 @@ namespace Sonn.EndlessGame
             if (col.gameObject.CompareTag(GameTag.Block.ToString()))
             {
                 Blocks bl = col.gameObject.GetComponent<Blocks>();
-                if (bl)
+                if (bl && bl.Id != m_blockID)
                 {
+                    m_blockID = bl.Id;
+                    GameManager.Ins.AddScore(bl.CurrentScore);
                     bl.PlayerLand();
+                }    
+                if (col != null && col.contactCount > 0 && landVfx)
+                {
+                    Vector3 spawnPos = new(transform.position.x,
+                        col.contacts[0].point.y,
+                        transform.position.z);
+
+                    Instantiate(landVfx, spawnPos, Quaternion.identity);
                 }    
             }    
         }
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.CompareTag(GameTag.DeadZone.ToString()))
+            if (col.gameObject.CompareTag(GameTag.DeadZone.ToString())
+                && !m_isDead)
             {
-                Debug.Log("Đã va chạm vào vùng chết");
+                if (IsComponentNull())
+                {
+                    return;
+                }
+
+                m_isDead = true;
+                gameObject.layer = LayerMask.NameToLayer(GameLayer.Dead.ToString());
+                m_animator.SetTrigger(CharacterAnimator.Dead.ToString());
+                GameManager.Ins.GameOver();
             }    
         }
 

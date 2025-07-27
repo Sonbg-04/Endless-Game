@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6331644200047428205}
   - component: {fileID: 6885387027608862704}
   - component: {fileID: 5975957058008187730}
+  - component: {fileID: 2908718960700768896}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -106,3 +107,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2908718960700768896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3648723572680811945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ca023819fcdbe49b6436ab97fdf039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 0.25
+  isAutoDestroy: 1
