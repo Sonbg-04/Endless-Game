@@ -186,7 +186,7 @@ namespace Sonn.EndlessGame
                 return;
             }
             gameState = GameState.GameOver;
-            Debug.Log("Game Over! Final Score: " + m_score);
+            CamShake.Ins.ShakeTrigger();
         }    
         public void AddScore(int score)
         {

@@ -6,7 +6,7 @@ namespace Sonn.EndlessGame
 {
     public class CamShake : MonoBehaviour
     {
-        public static CamShake ins;
+        public static CamShake Ins;
 
         // Transform of the camera to shake. Grabs the gameObject's transform
         // if null.
@@ -25,7 +25,7 @@ namespace Sonn.EndlessGame
 
         public void Awake()
         {
-            ins = this;
+            Ins = this;
         }
 
         void OnEnable()
