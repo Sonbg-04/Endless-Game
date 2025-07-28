@@ -20,7 +20,6 @@ namespace Sonn.EndlessGame
                      decreaseFactor = 1.0f;
 
         private bool m_canShake;
-
         private Vector3 originalPos;
 
         public void Awake()

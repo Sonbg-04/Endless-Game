@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Sonn/EndlessGame/Scenes/Mainmenu.unity
+    guid: 1c7b290e118487a44a0e6c7d60a24dc1
+  - enabled: 1
     path: Assets/Sonn/EndlessGame/Scenes/Gameplay.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
