@@ -115,11 +115,6 @@ namespace Sonn.EndlessGame
             if (col.gameObject.CompareTag(GameTag.DeadZone.ToString())
                 && !m_isDead)
             {
-                if (IsComponentNull())
-                {
-                    return;
-                }
-
                 m_isDead = true;
                 gameObject.layer = LayerMask.NameToLayer(GameLayer.Dead.ToString());
                 m_animator.SetTrigger(CharacterAnimator.Dead.ToString());

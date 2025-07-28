@@ -54,6 +54,8 @@ namespace Sonn.EndlessGame
             m_cameraSize = Helper.Get2DCamSize();
             m_blockSpawnPosY = -m_cameraSize.y / 2 + 1f;
             m_curLevel = LevelManager.Ins.GetLevel();
+            m_blockIndex = 1;
+
             Pref.hasBestScore = false;
             if (m_curLevel != null)
             {
