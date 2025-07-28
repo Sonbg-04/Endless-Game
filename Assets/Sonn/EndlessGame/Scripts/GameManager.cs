@@ -69,8 +69,7 @@ namespace Sonn.EndlessGame
                 if (blockPrefab)
                 {
                     m_curBlock = Instantiate(blockPrefab, new(0, m_blockSpawnPosY, 0), Quaternion.identity);
-
-                }    
+                }
             }
             ActivePlayer();
         }
@@ -91,6 +90,10 @@ namespace Sonn.EndlessGame
                 if (newPlayerPrefab)
                 {
                     m_curPlayer = Instantiate(newPlayerPrefab, new(0, -1, 0), Quaternion.identity);
+                }
+                if (m_curPlayer)
+                {
+                    CameraFollow.Ins.target = m_curPlayer.transform;
                 }
             }    
         }    
