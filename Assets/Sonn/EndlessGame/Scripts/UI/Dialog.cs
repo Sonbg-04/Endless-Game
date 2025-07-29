@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Sonn.EndlessGame
 {
     public class Dialog : MonoBehaviour
     {
-        public TextMeshProUGUI titleTxt, contentTxt;
+        public Text titleTxt, contentTxt;
 
         public virtual void Show(bool isShow)
         {
