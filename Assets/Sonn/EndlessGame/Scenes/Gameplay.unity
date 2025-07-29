@@ -490,7 +490,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 448987116}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973241469}
+        m_TargetAssemblyTypeName: Sonn.EndlessGame.PauseDialog, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &448987116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,6 +877,7 @@ GameObject:
   - component: {fileID: 973241466}
   - component: {fileID: 973241468}
   - component: {fileID: 973241467}
+  - component: {fileID: 973241469}
   m_Layer: 5
   m_Name: Pause_Dialog
   m_TagString: Untagged
@@ -931,6 +944,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973241465}
   m_CullTransparentMesh: 1
+--- !u!114 &973241469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973241465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ce54f595c323d46a351b4174b26af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleTxt: {fileID: 0}
+  contentTxt: {fileID: 0}
 --- !u!1 &1044031637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,7 +2779,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6887165153399082547}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973241469}
+        m_TargetAssemblyTypeName: Sonn.EndlessGame.PauseDialog, Assembly-CSharp
+        m_MethodName: BackToHome
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &4778275636198236734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2964,7 +3003,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 426054794029151874}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973241469}
+        m_TargetAssemblyTypeName: Sonn.EndlessGame.PauseDialog, Assembly-CSharp
+        m_MethodName: CloseDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6816061613927899457
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,7 +3144,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 951597002138807117}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973241469}
+        m_TargetAssemblyTypeName: Sonn.EndlessGame.PauseDialog, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &8267325891883580095
 RectTransform:
   m_ObjectHideFlags: 0
