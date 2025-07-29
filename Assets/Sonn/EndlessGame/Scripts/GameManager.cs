@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Sonn.EndlessGame
 {
-    public class GameManager : MonoBehaviour, ISingleton, IComponentChecking
+    public class GameManager : MonoBehaviour, IComponentChecking
     {
         public static GameManager Ins;
         public float gameSpeed;
@@ -23,7 +23,7 @@ namespace Sonn.EndlessGame
 
         private void Awake()
         {
-            MakeSingleton();
+            Ins = this;
         }
 
         void Start()
@@ -31,18 +31,6 @@ namespace Sonn.EndlessGame
             Init();
         }
 
-        public void MakeSingleton()
-        {
-            if (Ins == null)
-            {
-                Ins = this;
-                DontDestroyOnLoad(this);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
         public void Init()
         {
             if (IsComponentNull())

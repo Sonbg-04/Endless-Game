@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Sonn.EndlessGame
 {
-    public class GUIManager : MonoBehaviour, ISingleton
+    public class GUIManager : MonoBehaviour
     {
         public static GUIManager Ins;
         public GameObject homeGUI, gameGUI;
@@ -16,21 +16,9 @@ namespace Sonn.EndlessGame
         
         private void Awake()
         {
-            MakeSingleton();
+            Ins = this;
         }
-        public void MakeSingleton()
-        {
-            if (Ins == null)
-            {
-                Ins = this;
-                DontDestroyOnLoad(this);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }    
-        }
-
+        
         public void ShowGUI(bool isShow)
         {
             if (gameGUI)

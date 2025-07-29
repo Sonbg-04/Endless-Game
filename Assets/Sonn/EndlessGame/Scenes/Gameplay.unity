@@ -407,6 +407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleTxt: {fileID: 0}
   contentTxt: {fileID: 0}
+  scoreTxt: {fileID: 929248391}
+  bestScoreTxt: {fileID: 1414655469}
 --- !u!1 &448987113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +1012,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1044031640}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 301295044}
+        m_TargetAssemblyTypeName: Sonn.EndlessGame.GameoverDialog, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1044031640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,7 +1172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -255.2}
+  m_AnchoredPosition: {x: 0, y: -255.20001}
   m_SizeDelta: {x: 900, y: 186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065594217
@@ -2660,7 +2674,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5737019476390006423}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 301295044}
+        m_TargetAssemblyTypeName: Sonn.EndlessGame.GameoverDialog, Assembly-CSharp
+        m_MethodName: BackToHome
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &3463916444707331941
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3081,8 +3107,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7409556830507349366}
-  - {fileID: 92039453455415015}
   - {fileID: 5015389226913584742}
+  - {fileID: 92039453455415015}
   m_Father: {fileID: 301295041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
