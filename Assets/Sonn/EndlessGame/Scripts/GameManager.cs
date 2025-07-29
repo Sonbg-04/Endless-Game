@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,7 +29,6 @@ namespace Sonn.EndlessGame
         void Start()
         {
             Init();
-            StartCoroutine(SpawnBlockCoroutine());
         }
 
         public void MakeSingleton()
@@ -72,6 +71,7 @@ namespace Sonn.EndlessGame
                 }
             }
             ActivePlayer();
+            GUIManager.Ins.ShowGUI(false);
         }
 
         public void ActivePlayer()
@@ -100,7 +100,12 @@ namespace Sonn.EndlessGame
 
         public bool IsComponentNull()
         {
-            return LevelManager.Ins == null;
+            bool check = LevelManager.Ins == null || GUIManager.Ins == null;
+            if (check)
+            {
+                Debug.LogWarning("Có component bị rỗng. Vui lòng kiểm tra lại!");
+            }
+            return check;
         }
 
         IEnumerator SpawnBlockCoroutine()
@@ -178,6 +183,7 @@ namespace Sonn.EndlessGame
             }
             gameState = GameState.Playing;
             StartCoroutine(SpawnBlockCoroutine());
+            GUIManager.Ins.ShowGUI(true);
         }    
         public void GameOver()
         {
@@ -187,6 +193,7 @@ namespace Sonn.EndlessGame
             }
             gameState = GameState.GameOver;
             CamShake.Ins.ShakeTrigger();
+            GUIManager.Ins.ShowGameOverTxtImg();
         }    
         public void AddScore(int score)
         {
@@ -196,6 +203,7 @@ namespace Sonn.EndlessGame
             }
             m_score += score;
             Pref.bestScore = m_score;
+            GUIManager.Ins.UpdateScore(m_score);
 
         }    
     }
