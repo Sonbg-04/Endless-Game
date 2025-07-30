@@ -124,5 +124,14 @@ namespace Sonn.EndlessGame
             }    
         }
 
+        //private void OnDrawGizmos()
+        //{
+        //    m_centerPos = new(transform.position.x,
+        //                        transform.position.y - blockCheckingOffset,
+        //                                    transform.position.z);
+        //    Gizmos.color = Color.red;
+        //    Gizmos.DrawSphere(m_centerPos, blockCheckingRadius);
+        //}
+
     }
 }
