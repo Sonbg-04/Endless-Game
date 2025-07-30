@@ -88,7 +88,8 @@ namespace Sonn.EndlessGame
 
         public bool IsComponentNull()
         {
-            bool check = LevelManager.Ins == null || GUIManager.Ins == null;
+            bool check = LevelManager.Ins == null || GUIManager.Ins == null
+                || AudioManager.Ins == null;
             if (check)
             {
                 Debug.LogWarning("Có component bị rỗng. Vui lòng kiểm tra lại!");
@@ -172,6 +173,9 @@ namespace Sonn.EndlessGame
             gameState = GameState.Playing;
             StartCoroutine(SpawnBlockCoroutine());
             GUIManager.Ins.ShowGUI(true);
+            AudioManager.Ins.StopMusic(AudioManager.Ins.menuSource);
+            AudioManager.Ins.PlayMusic(AudioManager.Ins.backgroundSource);
+            
         }    
         public void GameOver()
         {
@@ -182,7 +186,9 @@ namespace Sonn.EndlessGame
             gameState = GameState.GameOver;
             CamShake.Ins.ShakeTrigger();
             GUIManager.Ins.ShowGameOverTxtImg();
-        }    
+            AudioManager.Ins.StopMusic(AudioManager.Ins.backgroundSource);
+            AudioManager.Ins.PlaySoundOneShots(AudioManager.Ins.gameOverSource);
+        }
         public void AddScore(int score)
         {
             if (IsComponentNull() || gameState != GameState.Playing)
@@ -192,7 +198,7 @@ namespace Sonn.EndlessGame
             m_score += score;
             Pref.bestScore = m_score;
             GUIManager.Ins.UpdateScore(m_score);
-
+            AudioManager.Ins.PlaySoundOneShots(AudioManager.Ins.scoreSource);
         }    
     }
 

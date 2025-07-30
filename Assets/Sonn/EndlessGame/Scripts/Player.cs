@@ -82,6 +82,7 @@ namespace Sonn.EndlessGame
             {
                 return;
             }
+            AudioManager.Ins.PlaySoundOneShots(AudioManager.Ins.jumpSource);
             GamePadController.Ins.CanJump = false;
             m_rb.velocity = Vector2.up * jumpForce;
 
@@ -107,7 +108,8 @@ namespace Sonn.EndlessGame
                         transform.position.z);
 
                     Instantiate(landVfx, spawnPos, Quaternion.identity);
-                }    
+                } 
+                AudioManager.Ins.PlaySoundOneShots(AudioManager.Ins.landSource);
             }    
         }
         private void OnTriggerEnter2D(Collider2D col)

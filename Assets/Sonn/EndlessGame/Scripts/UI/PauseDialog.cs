@@ -7,10 +7,10 @@ namespace Sonn.EndlessGame
 {
     public class PauseDialog : Dialog
     {
-
         public override void Show(bool isShow)
         {
             base.Show(isShow);
+            AudioManager.Ins.PauseMusic(AudioManager.Ins.backgroundSource);
             Time.timeScale = 0f;
         }
 
@@ -18,12 +18,14 @@ namespace Sonn.EndlessGame
         {
             base.CloseDialog();
             Time.timeScale = 1f;
+            AudioManager.Ins.ResumeMusic(AudioManager.Ins.backgroundSource);
         }
 
         public void BackToHome()
         {
             CloseDialog();
             SceneManager.LoadScene(GameScene.MainMenu.ToString());
+            AudioManager.Ins.StopMusic(AudioManager.Ins.backgroundSource);
         }
 
         public void Replay()

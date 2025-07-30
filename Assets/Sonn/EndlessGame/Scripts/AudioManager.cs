@@ -5,28 +5,22 @@ using UnityEngine.Audio;
 
 namespace Sonn.EndlessGame
 {
-    public class AudioManager : MonoBehaviour
+    public class AudioManager : MonoBehaviour, ISingleton
     {
-        public AudioSource musicSource, atkSource, enemyDeadSource, gameOverSource;
         public static AudioManager Ins;
+      
+        public AudioSource backgroundSource, menuSource, 
+            bonusSource, btnClickSource, gameOverSource,
+            jumpSource, landSource, newBestScoreSource,
+            scoreSource;
 
         private void Awake()
         {
-            Ins = this;
+            MakeSingleton();
         }
 
-        public bool IsComponentsNull()
-        {
-            return musicSource == null || atkSource == null || enemyDeadSource == null 
-                || gameOverSource == null;
-        }
-        
         public void PlayMusic(AudioSource audioSource)
         {
-            if (IsComponentsNull())
-            {
-                return;
-            }
 
             if (audioSource)
             {
@@ -38,10 +32,6 @@ namespace Sonn.EndlessGame
         }
         public void PauseMusic(AudioSource audioSource)
         {
-            if (IsComponentsNull())
-            {
-                return;
-            }
 
             if (audioSource)
             {
@@ -50,10 +40,6 @@ namespace Sonn.EndlessGame
         }
         public void ResumeMusic(AudioSource audioSource)
         {
-            if (IsComponentsNull())
-            {
-                return;
-            }
 
             if (audioSource)
             {
@@ -62,16 +48,30 @@ namespace Sonn.EndlessGame
         }
         public void PlaySoundOneShots(AudioSource audioSource)
         {
-            if (IsComponentsNull())
-            {
-                return;
-            }
 
             if (audioSource)
             {
                 audioSource.PlayOneShot(audioSource.clip);
             }
         }
-        
+        public void StopMusic(AudioSource audioSource)
+        {
+            if (audioSource)
+            {
+                audioSource.Stop();
+            }    
+        }    
+        public void MakeSingleton()
+        {
+            if (Ins == null)
+            {
+                Ins = this;
+                DontDestroyOnLoad(this);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }    
+        }
     }
 }

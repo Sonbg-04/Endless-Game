@@ -22,6 +22,7 @@ namespace Sonn.EndlessGame
                 if (bestScoreTxt)
                 {
                     bestScoreTxt.text = $"NEW BEST: {Pref.bestScore}";
+                    AudioManager.Ins.PlaySoundOneShots(AudioManager.Ins.newBestScoreSource);
                 }    
             }
             else
