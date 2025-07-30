@@ -662,7 +662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &795371171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1844,6 +1844,7 @@ GameObject:
   - component: {fileID: 1494876477}
   - component: {fileID: 1494876476}
   - component: {fileID: 1494876475}
+  - component: {fileID: 1494876478}
   m_Layer: 5
   m_Name: MobileGamePad
   m_TagString: Untagged
@@ -1952,6 +1953,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494876473}
   m_CullTransparentMesh: 1
+--- !u!114 &1494876478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494876473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1674772025}
+          m_TargetAssemblyTypeName: Sonn.EndlessGame.GamePadController, Assembly-CSharp
+          m_MethodName: set_CanJump
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1674772025}
+          m_TargetAssemblyTypeName: Sonn.EndlessGame.GamePadController, Assembly-CSharp
+          m_MethodName: set_CanJump
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1528946094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,7 +2172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d04b9c5df9487143a8b2446ce528537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOnMobile: 0
+  isOnMobile: 1
 --- !u!4 &1674772026
 Transform:
   m_ObjectHideFlags: 0

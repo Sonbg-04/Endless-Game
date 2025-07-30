@@ -379,7 +379,7 @@ MonoBehaviour:
     baseSpeed: 1
     maxSpeed: 3
     map: {fileID: 6723077830173155440, guid: 6e934b17869a576478cb315077d40f1b, type: 3}
-  - scoreRequire: 20
+  - scoreRequire: 150
     unlockThumb: {fileID: 21300000, guid: d72229b8549cd4243839144fbdddea46, type: 3}
     lockThumb: {fileID: 21300000, guid: 4f77d36bc7ffa28478b488e219583365, type: 3}
     levelBG: {fileID: 21300000, guid: 809d2386faffb874ab3a1f1d6bb075f8, type: 3}
@@ -390,7 +390,7 @@ MonoBehaviour:
     baseSpeed: 1.5
     maxSpeed: 4
     map: {fileID: 890283562352339142, guid: 65c7b57ed128a114fad63f4e6d169131, type: 3}
-  - scoreRequire: 30
+  - scoreRequire: 300
     unlockThumb: {fileID: 21300000, guid: 6839171bfc89297498d478b7b5e94faa, type: 3}
     lockThumb: {fileID: 21300000, guid: ef76a44c85836b24ca24f6fbfef70795, type: 3}
     levelBG: {fileID: 21300000, guid: 12410dd5714b2564ba79a6f6cd7c8b12, type: 3}
@@ -401,7 +401,7 @@ MonoBehaviour:
     baseSpeed: 1.8
     maxSpeed: 5
     map: {fileID: 3674382378905938879, guid: df6a582ccc45b584d8f389c962cd9a10, type: 3}
-  - scoreRequire: 40
+  - scoreRequire: 450
     unlockThumb: {fileID: 21300000, guid: bec04b01df28afa44a3f7fd5785ff09a, type: 3}
     lockThumb: {fileID: 21300000, guid: fc8ae64c34b27454e864e8184d4f7851, type: 3}
     levelBG: {fileID: 21300000, guid: 1d3358d0a33840342b16839acd6b17df, type: 3}
@@ -412,7 +412,7 @@ MonoBehaviour:
     baseSpeed: 2
     maxSpeed: 6
     map: {fileID: 7447281437627631521, guid: 7aa194790c87fdd468b9cede31f6ad13, type: 3}
-  - scoreRequire: 41
+  - scoreRequire: 650
     unlockThumb: {fileID: 21300000, guid: 49b6eb7a00d490b4d95188c3d1c82de0, type: 3}
     lockThumb: {fileID: 21300000, guid: 8b2a491d32dea784b82065f46d2e1248, type: 3}
     levelBG: {fileID: 21300000, guid: 3d0c71c60cbe12343a03b9ac5d2ef9c0, type: 3}
@@ -423,7 +423,7 @@ MonoBehaviour:
     baseSpeed: 2.5
     maxSpeed: 6.5
     map: {fileID: 2570984810060833618, guid: 5b7abf937e07040479001f92798e414c, type: 3}
-  - scoreRequire: 42
+  - scoreRequire: 800
     unlockThumb: {fileID: 21300000, guid: fdc1610bb4b10104aaa8e0c84939900a, type: 3}
     lockThumb: {fileID: 21300000, guid: 8b2a491d32dea784b82065f46d2e1248, type: 3}
     levelBG: {fileID: 21300000, guid: 11cb4776cdfd80d4e99387c3f5597ee4, type: 3}
