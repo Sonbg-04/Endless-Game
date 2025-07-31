@@ -60,7 +60,8 @@ namespace Sonn.EndlessGame
             {
                 audioSource.Stop();
             }    
-        }    
+        }
+
         public void MakeSingleton()
         {
             if (Ins == null)

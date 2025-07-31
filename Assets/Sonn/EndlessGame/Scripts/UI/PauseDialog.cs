@@ -32,6 +32,7 @@ namespace Sonn.EndlessGame
         {
             CloseDialog();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            AudioManager.Ins.StopMusic(AudioManager.Ins.backgroundSource);
         }
     }
 }

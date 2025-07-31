@@ -2172,7 +2172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d04b9c5df9487143a8b2446ce528537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOnMobile: 1
+  isOnMobile: 0
 --- !u!4 &1674772026
 Transform:
   m_ObjectHideFlags: 0
